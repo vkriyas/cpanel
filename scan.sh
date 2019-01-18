@@ -22,7 +22,7 @@ echo "OWNER=$OWNER"
 if [ "$OWNER" != "root" ]; then
   OWNER_EMAIL=$(sudo cat /var/cpanel/users/$OWNER |grep CONTACTEMAIL= |cut -d= -f 2)
   echo "OWNER_EMAIL=$OWNER_EMAIL"
-  OWNER_DNS=$(sudo cat /var/cpanel/users/$OWNER |grep DNS1= |cut -d= -f 2)
+  OWNER_DNS=$(sudo cat /var/cpanel/users/$OWNER |grep DNS= |cut -d= -f 2)
   echo "OWNER_DNS=$OWNER_DNS"
 fi
 
