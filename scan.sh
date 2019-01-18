@@ -19,14 +19,14 @@ host_name=$(hostname  |cut -d. -f 1)
 echo "Hostname = $host_name"
 
 EMAIL=$(sudo cat /var/cpanel/users/$USERNAME |grep CONTACTEMAIL= |cut -d= -f 2)
-echo "EMAIL=$EMAIL"
+echo "EMAIL = $EMAIL"
 OWNER=$(sudo cat /var/cpanel/users/$USERNAME |grep OWNER= |cut -d= -f 2)
-echo "OWNER=$OWNER"
+echo "OWNER = $OWNER"
 if [ "$OWNER" != "root" ]; then
   OWNER_EMAIL=$(sudo cat /var/cpanel/users/$OWNER |grep CONTACTEMAIL= |cut -d= -f 2)
-  echo "OWNER_EMAIL=$OWNER_EMAIL"
+  echo "OWNER_EMAIL = $OWNER_EMAIL"
   OWNER_DNS=$(sudo cat /var/cpanel/users/$OWNER |grep DNS= |cut -d= -f 2)
-  echo "OWNER_DNS=$OWNER_DNS"
+  echo "OWNER_DNS = $OWNER_DNS"
 fi
 
 echo -e "\nscanning ...\n"
