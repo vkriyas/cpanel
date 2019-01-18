@@ -15,6 +15,9 @@ if [ "$USERNAME" == "" ]; then
         exit 1
 fi
 
+host_name=$(hostname  |cut -d. -f 1)
+echo "Hostname = $host_name"
+
 EMAIL=$(sudo cat /var/cpanel/users/$USERNAME |grep CONTACTEMAIL= |cut -d= -f 2)
 echo "EMAIL=$EMAIL"
 OWNER=$(sudo cat /var/cpanel/users/$USERNAME |grep OWNER= |cut -d= -f 2)
