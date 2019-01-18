@@ -2,12 +2,12 @@
 USER=$1
 TICKET=$2
 
-if [ "$USER" == " ]; then
+if [ "$USER" == "" ]; then
 	echo "USER must be specified"
 	exit 1
 fi
 
-if [ "$TICKET" == " ]; then
+if [ "$TICKET" == "" ]; then
         echo "TICKET must be specified"
         exit 1
 fi
