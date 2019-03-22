@@ -22,11 +22,11 @@ if [ $? -eq 0 ]; then
         home_dir=$home_base/$USERNAME/public_html
 else
 
-        if sudo [ -d $home_dir/$USERNAME/$DOMAIN ] ; then
+        if sudo [ -d $home_base/$USERNAME/$DOMAIN ] ; then
                 home_dir=$home_base/$USERNAME/$DOMAIN
         fi
 
-        if sudo [ -d $home_dir/$USERNAME/public_html/$DOMAIN ] ; then
+        if sudo [ -d $home_base/$USERNAME/public_html/$DOMAIN ] ; then
                 home_dir=$home_base/$USERNAME/public_html/$DOMAIN
         fi
 fi
