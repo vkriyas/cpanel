@@ -12,6 +12,6 @@ if [ "$TICKET" == "" ]; then
         exit 1
 fi
 
-sudo /app/bin/suspension-backend.sh -u $USER -s addon -l hacked -e "Please refer ticket $TICKET or contact support." -m
 sudo /app/bin/suspension-backend.sh -u $USER -s http -l hacked -e "Please refer ticket # $TICKET or contact support." -m
+sudo /app/bin/suspension-backend.sh -u $USER -s addon -l hacked -e "Please refer ticket # $TICKET or contact support." -m
 sudo /app/bin/suspension-backend.sh -u $USER -s email -l spamming -e "Please refer ticket # $TICKET or contact support." -m
